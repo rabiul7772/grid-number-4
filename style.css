@@ -1,0 +1,42 @@
+.container {
+  height: 100%;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: 80px 450px 80px;
+  grid-template-areas: 
+  ". . h h h h h h h h h ."
+  "m m c c c c c c c c c c"
+  ". . f f f f f f f f f .";
+
+}
+
+.section {
+  font-family: cursive;
+  border: 1px solid black;
+  padding: 1.5rem;
+  color: white;
+  font-size: 1.5rem;
+  /* for text center */
+  display:flex;
+  justify-content: center;
+  align-items: center;
+}
+.header {
+  background-color: aqua;
+  grid-area: h;
+}
+.menu {
+  background-color: blueviolet;
+  /* 1 number line to 3 number line ( top to bottom)   */
+  grid-area: m; 
+
+}
+.content {
+  background-color: blue;
+  /* expansion from 2 line to last line */
+  grid-area: c;
+}
+.footer {
+  background-color: green;
+  grid-area: f;
+}
